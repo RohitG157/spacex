@@ -8,10 +8,10 @@
         <div class="spacex-card__detail type-list">
             <p class="spacex-card__detail-label">Mission Ids:</p>
             <ul class="detail-value">
-                    <div *ngIf="card.mission_id?.length > 0" >
-                            <li *ngFor="let each of card.mission_id"> {{each}}</li>
-                    </div>
-                    <li *ngIf="!card.mission_id?.length" >  NA</li>
+                <ng-container *ngIf="card.mission_id?.length > 0">
+                    <li *ngFor="let each of card.mission_id"> {{each}}</li>
+                </ng-container>
+                <li *ngIf="!card.mission_id?.length" >  NA</li>
             </ul>
         </div>
         <div class="spacex-card__detail">
