@@ -1,0 +1,27 @@
+<div class="spacex-filters">
+  <h2>Filters</h2>
+  <div class="spacex-filter__category">
+    <h3 class="spacex-filter__title">Launch Year</h3>
+    <div class="spacex-filter__btns">
+      <button *ngFor="let each of filter.launch_year; trackBy: trackByFn;let i = index"
+        [ngClass]="{'launch-year': selected_launch_year == each}" class="filter-item"
+        (click)="filterData('launch_year',each, i)">{{each}}</button>
+    </div>
+  </div>
+  <div class="spacex-filter__category">
+    <h3 class="spacex-filter__title">Successful Launch</h3>
+    <div class="spacex-filter__btns">
+      <button *ngFor="let each of filter.successful_launch; trackBy: trackByFn; let i = index" class="filter-item"
+        [ngClass]="{'successful_launch': selected_successful_launch == each}"
+        (click)="filterData('successful_launch',each,i)">{{each}}</button>
+    </div>
+  </div>
+  <div class="spacex-filter__category">
+    <h3 class="spacex-filter__title">Successful Landing</h3>
+    <div class="spacex-filter__btns">
+      <button class="filter-item" *ngFor="let each of filter.successful_landing; trackBy: trackByFn; let i = index"
+        [ngClass]="{'successful_landing': selected_successful_landing == each}"
+        (click)="filterData('successful_landing',each,i)">{{each}}</button>
+    </div>
+  </div>
+</div>
