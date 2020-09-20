@@ -10,10 +10,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "dev:ssr": "ng run flight-search:serve-ssr",
-    "serve:ssr": "node dist/flight-search/server/main.js",
+    "serve:ssr": "node dist/flight-search/server",
     "build:ssr": "ng build --prod && ng run flight-search:server:production",
     "prerender": "ng run flight-search:prerender",
-    "start:heroku":"node dist/flight-search/server/main.js",
+    "start:heroku":"node dist/flight-search/server",
     "postinstall":"npm run build:ssr"
   },
   "engines": {
